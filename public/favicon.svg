@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs>
+    <linearGradient id="goldRing" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FDE68A" />
+      <stop offset="50%" stop-color="#F59E0B" />
+      <stop offset="100%" stop-color="#B45309" />
+    </linearGradient>
+    <linearGradient id="shieldBlue" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1E3A8A" />
+      <stop offset="100%" stop-color="#0F172A" />
+    </linearGradient>
+    <linearGradient id="torchFlame" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#EF4444" />
+      <stop offset="60%" stop-color="#F59E0B" />
+      <stop offset="100%" stop-color="#FDE047" />
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="2" flood-opacity="0.3" />
+    </filter>
+  </defs>
+
+  <!-- Outer Gold Rope Ring -->
+  <circle cx="64" cy="64" r="62" fill="none" stroke="url(#goldRing)" stroke-width="4" />
+  
+  <!-- Outer DepEd Deep Navy Blue Ring -->
+  <circle cx="64" cy="64" r="59" fill="url(#shieldBlue)" />
+
+  <!-- Inner Gold Beaded Border (No white fill) -->
+  <circle cx="64" cy="64" r="46" fill="none" stroke="url(#goldRing)" stroke-width="2" />
+  <circle cx="64" cy="64" r="43" fill="none" stroke="#FDE68A" stroke-width="0.8" stroke-dasharray="2 2" opacity="0.6" />
+
+  <!-- Laurel Wreath in Vibrant Emerald Green -->
+  <g fill="#22C55E" opacity="0.95">
+    <!-- Left Leaves -->
+    <path d="M 33,78 C 29,68 32,56 40,49 C 38,55 40,64 44,70 Z" />
+    <path d="M 36,86 C 30,80 30,72 36,65 C 38,71 41,77 46,82 Z" />
+    <!-- Right Leaves -->
+    <path d="M 95,78 C 99,68 96,56 88,49 C 90,55 88,64 84,70 Z" />
+    <path d="M 92,86 C 98,80 98,72 92,65 C 90,71 87,77 82,82 Z" />
+  </g>
+
+  <!-- 3 Stars of Excellence (Luzon, Visayas, Mindanao) -->
+  <g fill="#F59E0B">
+    <!-- Top Center -->
+    <polygon points="64,24 65.5,28.5 70,28.5 66.5,31 68,35.5 64,33 60,35.5 61.5,31 58,28.5 62.5,28.5" />
+    <!-- Left -->
+    <polygon points="49,30 50.2,33.5 54,33.5 51,35.5 52.2,39 49,37 45.8,39 47,35.5 44,33.5 47.8,33.5" />
+    <!-- Right -->
+    <polygon points="79,30 80.2,33.5 84,33.5 81,35.5 82.2,39 79,37 75.8,39 77,35.5 74,33.5 77.8,33.5" />
+  </g>
+
+  <!-- Blazing Torch of Wisdom & Knowledge -->
+  <g filter="url(#shadow)">
+    <!-- Main Flame -->
+    <path d="M 64,38 C 70,44 74,50 70,56 C 68,60 64,57 62,61 C 61,56 57,53 59,48 C 60,43 64,38 64,38 Z" fill="url(#torchFlame)" />
+    <!-- Inner Flame Core -->
+    <path d="M 64,45 C 67,49 69,53 67,56 C 65,58 63,56 62,58 C 62,55 60,53 61,51 C 62,48 64,45 64,45 Z" fill="#FEF08A" />
+    
+    <!-- Torch Bowl & Handle -->
+    <polygon points="59,60 69,60 67,76 61,76" fill="#B45309" stroke="#78350F" stroke-width="0.8" />
+    <rect x="58" y="59" width="12" height="3" rx="1" fill="#F59E0B" />
+  </g>
+
+  <!-- Open Book of Knowledge (Navy & Gold, no white background) -->
+  <g filter="url(#shadow)">
+    <path d="M 64,96 C 58,92 46,90 36,94 L 36,78 C 46,74 58,76 64,80 C 70,76 82,74 92,78 L 92,94 C 82,90 70,92 64,96 Z" 
+          fill="#1E3A8A" 
+          stroke="url(#goldRing)" 
+          stroke-width="2" 
+          stroke-linejoin="round" />
+    <!-- Spine -->
+    <line x1="64" y1="80" x2="64" y2="96" stroke="url(#goldRing)" stroke-width="2" />
+    <!-- Book Page Markings in Gold -->
+    <line x1="43" y1="82" x2="57" y2="85" stroke="#FDE047" stroke-width="1.2" stroke-linecap="round" />
+    <line x1="43" y1="87" x2="57" y2="90" stroke="#FDE047" stroke-width="1.2" stroke-linecap="round" />
+    <line x1="71" y1="85" x2="85" y2="82" stroke="#FDE047" stroke-width="1.2" stroke-linecap="round" />
+    <line x1="71" y1="90" x2="85" y2="87" stroke="#FDE047" stroke-width="1.2" stroke-linecap="round" />
+  </g>
+
+  <!-- Bottom Ribbon with VIS School Acronym & ID -->
+  <rect x="42" y="101" width="44" height="11" rx="2.5" fill="#0F172A" stroke="#F59E0B" stroke-width="1" />
+  <text x="64" y="109" fill="#FEF08A" font-size="7" font-family="system-ui, -apple-system, sans-serif" font-weight="800" text-anchor="middle" letter-spacing="0.8">
+    VIS 502996
+  </text>
+</svg>

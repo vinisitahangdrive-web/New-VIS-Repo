@@ -1,0 +1,6 @@
+{
+  "name": "Vinisitahan Integrated School",
+  "description": "Official website of Vinisitahan Integrated School (School ID: 502996), Vinisitahan, Donsol, Sorsogon - Donsol West II District.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

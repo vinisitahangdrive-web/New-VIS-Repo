@@ -1,0 +1,172 @@
+{
+  "entities": {
+    "post": {
+      "title": "Post",
+      "description": "School announcement or news post",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "maxLength": 128 },
+        "title": { "type": "string", "maxLength": 300 },
+        "slug": { "type": "string", "maxLength": 300 },
+        "category": { "type": "string", "maxLength": 100 },
+        "date": { "type": "string", "maxLength": 50 },
+        "author": { "type": "string", "maxLength": 200 },
+        "summary": { "type": "string", "maxLength": 1000 },
+        "content": { "type": "string", "maxLength": 50000 },
+        "pinned": { "type": "boolean" },
+        "department": { "type": "string", "maxLength": 200 },
+        "tags": { "type": "array" },
+        "imageUrl": { "type": "string", "maxLength": 2000000 },
+        "galleryImages": { "type": "array" },
+        "createdAt": { "type": "string", "maxLength": 100 },
+        "updatedAt": { "type": "string", "maxLength": 100 }
+      },
+      "required": ["id", "title", "category", "content"]
+    },
+    "schoolInfo": {
+      "title": "SchoolInfo",
+      "description": "School information and profile settings",
+      "type": "object",
+      "properties": {
+        "name": { "type": "string", "maxLength": 300 },
+        "schoolId": { "type": "string", "maxLength": 50 },
+        "district": { "type": "string", "maxLength": 150 },
+        "division": { "type": "string", "maxLength": 150 },
+        "region": { "type": "string", "maxLength": 150 },
+        "address": { "type": "string", "maxLength": 400 },
+        "email": { "type": "string", "maxLength": 150 },
+        "contactNumber": { "type": "string", "maxLength": 100 },
+        "principalName": { "type": "string", "maxLength": 200 },
+        "schoolHeadTitle": { "type": "string", "maxLength": 200 },
+        "announcementTicker": { "type": "string", "maxLength": 1000 },
+        "logoUrl": { "type": "string", "maxLength": 2000000 },
+        "studentEnrolledCount": { "type": "number" },
+        "teachersCount": { "type": "number" },
+        "nonTeachersCount": { "type": "number" },
+        "establishedYear": { "type": "string", "maxLength": 50 },
+        "schoolType": { "type": "string", "maxLength": 100 },
+        "shiftSystem": { "type": "string", "maxLength": 100 },
+        "updatedAt": { "type": "string", "maxLength": 100 }
+      }
+    },
+    "personnelSettings": {
+      "title": "PersonnelSettings",
+      "description": "Directory of faculty and staff members",
+      "type": "object",
+      "properties": {
+        "members": { "type": "array" },
+        "updatedAt": { "type": "string", "maxLength": 100 }
+      }
+    },
+    "securitySettings": {
+      "title": "SecuritySettings",
+      "description": "Admin security credentials",
+      "type": "object",
+      "properties": {
+        "adminPassword": { "type": "string", "maxLength": 100 },
+        "updatedAt": { "type": "string", "maxLength": 100 }
+      }
+    },
+    "facilitiesSettings": {
+      "title": "FacilitiesSettings",
+      "description": "Directory of campus learning facilities, laboratories, and grounds",
+      "type": "object",
+      "properties": {
+        "facilities": { "type": "array" },
+        "updatedAt": { "type": "string", "maxLength": 100 }
+      }
+    },
+    "hliSettings": {
+      "title": "HLISettings",
+      "description": "Healthy Learning Institute (HLI) 6 Pillars structure and institutional health policies",
+      "type": "object",
+      "properties": {
+        "title": { "type": "string", "maxLength": 200 },
+        "subtitle": { "type": "string", "maxLength": 300 },
+        "description": { "type": "string", "maxLength": 2000 },
+        "pillars": { "type": "array" },
+        "updatedAt": { "type": "string", "maxLength": 100 }
+      }
+    },
+    "hliFile": {
+      "title": "HLIFile",
+      "description": "Downloadable file or record attached to a Healthy Learning Institute pillar",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "maxLength": 128 },
+        "pillarId": { "type": "string", "maxLength": 128 },
+        "name": { "type": "string", "maxLength": 255 },
+        "title": { "type": "string", "maxLength": 255 },
+        "fileSize": { "type": "string", "maxLength": 50 },
+        "fileType": { "type": "string", "maxLength": 50 },
+        "uploadedAt": { "type": "string", "maxLength": 50 },
+        "isRestricted": { "type": "boolean" },
+        "restrictionReason": { "type": "string", "maxLength": 500 },
+        "description": { "type": "string", "maxLength": 1000 },
+        "downloadUrl": { "type": "string" },
+        "hasChunks": { "type": "boolean" },
+        "chunkCount": { "type": "number" },
+        "createdAt": { "type": "string", "maxLength": 100 },
+        "updatedAt": { "type": "string", "maxLength": 100 }
+      },
+      "required": ["id", "pillarId", "name", "title"]
+    },
+    "inquiry": {
+      "title": "Inquiry",
+      "description": "Inquiry submitted by a user for the school administration",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "maxLength": 128 },
+        "name": { "type": "string", "maxLength": 200 },
+        "phone": { "type": "string", "maxLength": 50 },
+        "email": { "type": "string", "maxLength": 150 },
+        "inquiryType": { "type": "string", "maxLength": 150 },
+        "message": { "type": "string", "maxLength": 5000 },
+        "submittedAt": { "type": "string", "maxLength": 100 },
+        "status": { "type": "string", "maxLength": 50 },
+        "targetSchoolEmail": { "type": "string", "maxLength": 150 },
+        "emailStatus": { "type": "string", "maxLength": 50 },
+        "emailNotificationSent": { "type": "boolean" },
+        "emailNotificationLog": { "type": "string", "maxLength": 1000 },
+        "adminNotes": { "type": "string", "maxLength": 2000 },
+        "createdAt": { "type": "string", "maxLength": 100 },
+        "updatedAt": { "type": "string", "maxLength": 100 }
+      },
+      "required": ["id", "name", "phone", "message"]
+    }
+  },
+  "firestore": {
+    "/posts/{postId}": {
+      "schema": "post",
+      "description": "School announcements, memos, events, and achievements"
+    },
+    "/settings/schoolInfo": {
+      "schema": "schoolInfo",
+      "description": "Global school info, contact details, ticker, and logo"
+    },
+    "/settings/personnel": {
+      "schema": "personnelSettings",
+      "description": "Directory of school personnel and organizational structure"
+    },
+    "/settings/security": {
+      "schema": "securitySettings",
+      "description": "Admin password configuration"
+    },
+    "/settings/facilities": {
+      "schema": "facilitiesSettings",
+      "description": "Campus learning facilities, laboratories, and physical plant data"
+    },
+    "/settings/hli": {
+      "schema": "hliSettings",
+      "description": "Healthy Learning Institute 6 Pillars governance structure"
+    },
+    "/hli_files/{fileId}": {
+      "schema": "hliFile",
+      "description": "Cloud-synced files and downloadable resources for HLI pillars"
+    },
+    "/inquiries/{inquiryId}": {
+      "schema": "inquiry",
+      "description": "User inquiries and notifications dispatched to the school email"
+    }
+  }
+}
